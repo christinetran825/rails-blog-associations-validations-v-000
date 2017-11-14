@@ -15,7 +15,7 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>
     <%= f.label :content %><br>
-    <%= f.text_field :Content %><br>
+    <%= f.text_area :Content %><br>
     <%= f.label :tag_ids, "Tags" %><br>
     <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :none %><br>
   </div>

@@ -23,8 +23,8 @@ describe 'tags for posts', :type => :feature do
 
   it 'can create a post with adding multiple tags' do
     visit '/posts/new'
-    fill_in('Name', :with => 'Post title')
-    fill_in('Content', :with => 'post content')
+    fill_in('name', :with => 'Post title')
+    fill_in('content', :with => 'post content')
     check('cute')
     check('adorable')
     click_button('Create Post')

@@ -11,7 +11,7 @@ class TagsController < ApplicationController
   end
 
   def create
-
+    @tag = Tag.new(tag_params)
   end
 
   def show
@@ -27,6 +27,12 @@ class TagsController < ApplicationController
   def destroy
     @tag.delete
     redirect_to tag_path(@tag)
+  end
+
+private
+
+  def tag_params
+    params.require(:tag).permit(:name)
   end
 
 end

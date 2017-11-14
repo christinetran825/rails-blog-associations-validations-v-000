@@ -14,8 +14,14 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>
+  </div>
+  
+  <div class="field">
     <%= f.label :content %><br>
     <%= f.text_area :content %><br>
+  </div>
+
+  <div class="field">
     <%= f.label :tag_ids, "Tags" %><br>
     <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :none %><br>
   </div>
